@@ -55,6 +55,7 @@ Once both are installed, you can launch a new VM with the Ubuntu ISO image downl
 ### SDKMAN 5.18.2
 Install SDKMAN:
 `curl -s "https://get.sdkman.io" | bash`
+
 `source "$HOME/.sdkman/bin/sdkman-init.sh"`
 
 ### OpenJDK 11.0.11-open
