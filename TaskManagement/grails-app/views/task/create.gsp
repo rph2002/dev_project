@@ -5,7 +5,7 @@
         <title>Creating Task</title>
     </head>
     <body>
-        <g:form name="task" action="save" controller="task">
+        <g:form action="save" controller="task">
             <h1>Create a task</h1>
             <div class="form-group">
                 <label for="title">Title</label>

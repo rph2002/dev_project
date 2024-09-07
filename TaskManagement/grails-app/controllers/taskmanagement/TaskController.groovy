@@ -20,6 +20,7 @@ class TaskController {
     @Transactional
     def save() {
         def task = new Task(params)
+
         // Validate title and description fields to display appropriate messages
         if (!task.validate(["title"])) {
             flash.isError = true
