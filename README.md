@@ -5,6 +5,28 @@ manage their tasks through a web interface. The application will utilize server-
 rendering with Groovy Server Pages (GSP) for the views and leverage SiteMesh for
 templating.
 
+## Assumptions
+* You are running this application in a Linux-based environment
+* User is familiar with navigation in Linux-based environment
+* Only required features wanted
+
+## Limitations
+* Application is only available in local environment
+* All data in database is reset once the application stops running
+* Application performance was not tested with large amounts of data
+
+## Testing
+* The site uses a layout for the header, navigation bar, and footer for all pages
+* The navigation bar includes two buttons, "View Tasks" and "Create Task"
+* View Task includes a container of all current tasks ordered by creation data(oldest to newest), or a prompt to create a task if none exist
+* Each task is listed in a Bootstrap card that shows the user it's status, incomplete or completed, title, description, 2 buttons to edit or delete, and the dates it was created and last modified
+* If a user clicks on the status, a dropdown will appear allowing the user to make a task "completed" or "incomplete"
+* If a user clicks on the edit button, the user will be prompted with a form to input a different title and description, that is pre-filled with the selected task's values
+* If a user clicks on the delete button, the page will refresh and the selected task will be deleted
+* "Create Task" prompts the user with a form to fill in a title and description for a task
+* When saved, the user will be redirected to the "View Tasks" page and the new task will be present
+* All successful or unsuccessful actions will prompt an alert under the navigation bar informing the user of the status. Red for error, green for success
+
 ## Specific Technologies Used
 * VirtualBox 7.0.20
 * Ubuntu 24.04.1 LTS
@@ -19,51 +41,53 @@ templating.
 ### TaskManagement Project
 https://github.com/rph2002/dev_project/archive/refs/heads/main.zip
 
-### VirtualBox 7.0.20
-This is only required if you don't feel comfortable working in your PC's native environment
+or
 
-Download: https://www.virtualbox.org/wiki/Downloads
+`curl -L -o dev_project.zip https://github.com/rph2002/dev_project/archive/refs/heads/main.zip`
 
-### Ubuntu 24.04.1 LTS
-This is only required if you would prefer to do your work in an Ubuntu environment
+### VirtualBox 7.0.20 and Ubuntu 24.04.1 LTS
+Virtual Machine setup:
+- Download VirtualBox: [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
+- Download Ubuntu ISO: [Ubuntu 24.04.1 LTS](https://ubuntu.com/download/desktop)
 
-Download: https://ubuntu.com/download/desktop
+Once both are installed, you can launch a new VM with the Ubuntu ISO image downloaded
 
-* With VirtualBox and the Ubuntu ISO installed, open VirtualBox, hit "New"
-* Type a name for your machine
-* For the ISO image, browse to find the Ubuntu ISO file you just downloaded and select it
-* Then hit next, where you can choose the memory and cpu processors
-* I recommend 8G of memory and 2 processors
-* Then hit next until you reach finish
+*8 GB of memory and 2 processors are recommended*
 
 ### SDKMAN 5.18.2
-Follow the installation guide depending on your OS
-
-Download: https://sdkman.io/install/
+Install SDKMAN:
+`curl -s "https://get.sdkman.io" | bash`
 
 ### OpenJDK 11.0.11-open
-After install SDKMAN, run `sdk install java 11.0.11`
+Run `sdk install java 11.0.11`
 
 ### Grails 5.3.6
-Follow https://docs.grails.org/5.3.6/guide/single.html#gettingStarted to do a proper install of Grails 5.3.6
+Run `sdk install grails 5.3.6`
 
 ### IntelliJ Community Edition
-IntelliJ was the IDE used for creating the application, but you can use any IDE you are comfortable launching Grails apps with
+IntelliJ was the IDE used for creating the application
 
-Download: https://www.jetbrains.com/idea/download/?section=linux
+Download IntelliJ: [IntelliJ Download](https://www.jetbrains.com/idea/download/?section=linux)
 
 ## Setup
-Now that you have all the required technologies downloaded, you can launch the application
-
-**How to Launch Application**
-1. Grails
-  * In your terminal, proceed into the "/TaskManagement/" directory
-  * Either run `grails run-app` or `grails` to enter interative mode, then run `run-app` inside of interactive mode
+1. Run with Grails
+  * Navigate to "/TaskManagement/" directory
+  * Either run `grails run-app`
+  * Or run `grails` to enter interative mode, then run `run-app` inside of interactive mode
 2. IntelliJ
-  * Open IntelliJ
-  * Open a new project, and browse for for the project
-  * Select the `build.gradle` file inside of the /TaskManagement/ directory and open the project through that file
-  * Then, find the Application.groovy file inside "/TaskManagement/grails-app/init/taskmanagement/"
-  * Finally, hit the green arrow in the top right to run to application
+  * Open IntelliJ and load the project by selecting the "build.gradle" in the "/TaskManagement/" file
+  * Navigate to the Application.groovy file inside "/TaskManagement/grails-app/init/taskmanagement/" (structure below)
+/TaskManagement/
+├── build.gradle
+├── grails-app/
+│   └── init/
+│       └── taskmanagement/
+│           └── Application.groovy
+
+  * Hit the green run arrow in the top right to start the application
     
-Regardless of how you launched the app, the web page should be accessible at http://localhost:8080/
+With the application now running, visit http://localhost:8080/ to test it
+
+## Troubleshooting
+* If the application fails to launch, make sure all dependencies are installed correctly
+* Double check your Grails and Java versions
