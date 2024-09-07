@@ -33,9 +33,19 @@ Follow the installation guide depending on your OS
 Download: https://sdkman.io/install/
 
 ### OpenJDK 11.0.11-open
+After install SDKMAN, run `sdk install java 11.0.11`
 
 ### Grails 5.3.6
 Follow https://docs.grails.org/5.3.6/guide/single.html#gettingStarted to do a proper install of Grails 5.3.6
+
+If using Windows, you will need to install WSL to run the proper commands
+
+* First, run `wsl --install`
+* After it is installed, restart your machine
+* After you machine is restarted, a terminal with an Ubuntu shell should launch, asking for account creation
+* Then, run `sudo apt update`
+* Finally, run `sudo apt install curl zip unzip`
+* You should be able to backtrack in the downloads and download the proper technologies (SDKMAN, OpenJDK, Grails)
 
 ### IntelliJ Community Edition
 IntelliJ was the IDE used for creating the application, but you can use any IDE you are comfortable launching Grails apps with
