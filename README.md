@@ -14,6 +14,9 @@ templating.
 * IntelliJ Community Edition
 
 ## Downloads
+### TaskManagement Project
+https://github.com/rph2002/dev_project/archive/refs/heads/main.zip
+
 ### VirtualBox 7.0.20
 This is only required if you don't feel comfortable working in your PC's native environment
 
@@ -39,3 +42,15 @@ Download: https://www.jetbrains.com/idea/download/?section=windows
 
 ## Setup
 Now that you have all the required technologies downloaded, you can launch the application
+
+**How to Launch Application**
+1. Grails
+  * In your terminal, proceed into the "/TaskManagement/" directory
+  * Either run `grails run-app` or `grails` to enter interative mode, then run `run-app` inside of interactive mode
+2. IntelliJ
+  * Open IntelliJ
+  * Open a new project, and browse for for the project
+  * Select the `build.gradle` file inside of the /TaskManagement/ directory and open the project through that file
+  * Then, find the Application.groovy file inside "/TaskManagement/grails-app/init/taskmanagement/"
+  * Finally, hit the green arrow in the top right to run to application
+Regardless of how you launched the app, the web page should be accessible at http://localhost:8080/
