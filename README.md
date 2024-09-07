@@ -36,16 +36,11 @@ templating.
 * IntelliJ Community Edition
 
 ## Downloads
-### TaskManagement Project
-https://github.com/rph2002/dev_project/archive/refs/heads/main.zip
-
-or
-
-`curl -L -o dev_project.zip https://github.com/rph2002/dev_project/archive/refs/heads/main.zip`
-
 ### VirtualBox 7.0.20 and Ubuntu 24.04.1 LTS
 Virtual Machine setup:
 - Download VirtualBox: [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
+
+  
 - Download Ubuntu ISO: [Ubuntu 24.04.1 LTS](https://ubuntu.com/download/desktop)
 
 Once both are installed, you can launch a new VM with the Ubuntu ISO image downloaded
@@ -53,13 +48,15 @@ Once both are installed, you can launch a new VM with the Ubuntu ISO image downl
 *8 GB of memory and 2 processors are recommended*
 
 ### SDKMAN 5.18.2
-Install SDKMAN:
-`curl -s "https://get.sdkman.io" | bash`
+In order to install SDKMAN, you will first need to install curl, so run `sudo apt install curl`
 
-`source "$HOME/.sdkman/bin/sdkman-init.sh"`
+Install SDKMAN:
+Run `curl -s "https://get.sdkman.io" | bash`
+
+Then run `source "$HOME/.sdkman/bin/sdkman-init.sh"`
 
 ### OpenJDK 11.0.11-open
-Run `sdk install java 11.0.11`
+Run `sdk install java 11.0.11-open`
 
 ### Grails 5.3.6
 Run `sdk install grails 5.3.6`
@@ -67,23 +64,39 @@ Run `sdk install grails 5.3.6`
 ### IntelliJ Community Edition
 IntelliJ was the IDE used for creating the application
 
+Only recommended to download if viewing the project files
+
 Download IntelliJ: [IntelliJ Download](https://www.jetbrains.com/idea/download/?section=linux)
 
+or
+
+If using Ubuntu, you can open the App store and download IntelliJ through there for a simplified install
+
+### TaskManagement Project
+https://github.com/rph2002/dev_project/archive/refs/heads/main.zip
+
+or
+
+`curl -L -o dev_project.zip https://github.com/rph2002/dev_project/archive/refs/heads/main.zip`
+
 ## Setup
+After downloading the zipped application, you will need to unzip `unzip dev_project-main.zip` before following the next steps
+
+**Note:** Running the application with grails is recommended
+
 1. Run with Grails
-  * Navigate to "/TaskManagement/" directory
+  * Navigate to "/dev_project-main/TaskManagement/" directory
   * Either run `grails run-app`
   * Or run `grails` to enter interative mode, then run `run-app` inside of interactive mode
 2. IntelliJ
   * Open IntelliJ and load the project by selecting the "build.gradle" in the "/TaskManagement/" file
   * Navigate to the Application.groovy file inside "/TaskManagement/grails-app/init/taskmanagement/" (structure below)
-/TaskManagement/
-├── build.gradle
-├── grails-app/
-│   └── init/
-│       └── taskmanagement/
-│           └── Application.groovy
-
+  * /TaskManagement/
+  * ├── build.gradle
+  * ├── grails-app/
+  * │   └── init/
+  * │       └── taskmanagement/
+  * │           └── Application.groovy
   * Hit the green run arrow in the top right to start the application
     
 With the application now running, visit http://localhost:8080/ to test it
