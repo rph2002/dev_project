@@ -45,7 +45,7 @@ If using Windows, you will need to install WSL to run the proper commands
 * After you machine is restarted, a terminal with an Ubuntu shell should launch, asking for account creation
 * Then, run `sudo apt update`
 * Finally, run `sudo apt install curl zip unzip`
-* You should be able to backtrack in the downloads and download the proper technologies (SDKMAN, OpenJDK, Grails)
+* You should now be able to backtrack in the downloads and download the proper technologies (SDKMAN, OpenJDK, Grails)
 
 ### IntelliJ Community Edition
 IntelliJ was the IDE used for creating the application, but you can use any IDE you are comfortable launching Grails apps with
