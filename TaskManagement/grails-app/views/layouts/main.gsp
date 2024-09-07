@@ -33,10 +33,8 @@
                 <g:layoutBody />
             </div>
         </main>
-        <footer>
-            <div class="container-fluid bg-dark shadow-sm mt-3 sticky-bottom">
-                Test
-            </div>
+        <footer class="bg-dark text-center py-3">
+            <img src="${resource(dir: 'assets/images/', file: 'Zelifcam.png')}" alt="Zelifcam">
         </footer>
 
         <script src="${resource(dir: 'javascripts/', file: 'jquery-3.5.1.min.js')}"></script>

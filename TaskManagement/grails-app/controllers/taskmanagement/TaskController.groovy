@@ -95,7 +95,7 @@ class TaskController {
             task.lastUpdated = LocalDateTime.now()
             // If validate passes, save task
             if (task.save(flush: true)) {
-                flash.message = "Task edited successfully!"
+                flash.message = "Task updated!"
                 redirect(action: "index")
             } else {
                 // If save fails, display error message

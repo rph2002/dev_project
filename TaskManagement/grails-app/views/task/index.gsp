@@ -5,9 +5,9 @@
         <title>View Tasks</title>
     </head>
     <body>
-        <h1>Current Tasks</h1>
-        <div class="row row-cols-2">
-            <g:if test="${tasks}">
+        <g:if test="${tasks}">
+            <h1>Current Tasks</h1>
+            <div class="row row-cols-2">
                 <g:each in="${tasks}" var="task">
                     <div class="col mb-3">
                         <div class="card shadow ${task.isCompleted ? 'border-success' : 'border-warning'}">
@@ -34,10 +34,11 @@
                         </div>
                     </div>
                 </g:each>
-            </g:if>
-            <g:else>
-                <p>No tasks</p>
-            </g:else>
-        </div>
+            </div>
+        </g:if>
+        <g:else>
+            <h1>No tasks</h1>
+                <g:link action="create" controller="task" class="navbar-text nav-link ${active == 'create' ? 'active' : ''}"><i class="fa-solid fa-plus"></i> Create Task</g:link>
+        </g:else>
     </body>
 </html>
