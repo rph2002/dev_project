@@ -14,6 +14,8 @@ templating.
 * IntelliJ Community Edition
 
 ## Downloads
+**Note:** The running of this application assumes you are within a Linux based environment
+
 ### TaskManagement Project
 https://github.com/rph2002/dev_project/archive/refs/heads/main.zip
 
@@ -38,19 +40,10 @@ After install SDKMAN, run `sdk install java 11.0.11`
 ### Grails 5.3.6
 Follow https://docs.grails.org/5.3.6/guide/single.html#gettingStarted to do a proper install of Grails 5.3.6
 
-If using Windows, you will need to install WSL to run the proper commands
-
-* First, run `wsl --install`
-* After it is installed, restart your machine
-* After you machine is restarted, a terminal with an Ubuntu shell should launch, asking for account creation
-* Then, run `sudo apt update`
-* Finally, run `sudo apt install curl zip unzip`
-* You should now be able to backtrack in the downloads and download the proper technologies (SDKMAN, OpenJDK, Grails)
-
 ### IntelliJ Community Edition
 IntelliJ was the IDE used for creating the application, but you can use any IDE you are comfortable launching Grails apps with
 
-Download: https://www.jetbrains.com/idea/download/?section=windows
+Download: https://www.jetbrains.com/idea/download/?section=linux
 
 ## Setup
 Now that you have all the required technologies downloaded, you can launch the application
