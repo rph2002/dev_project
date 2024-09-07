@@ -36,8 +36,6 @@ templating.
 * IntelliJ Community Edition
 
 ## Downloads
-**Note:** The running of this application assumes you are within a Linux based environment
-
 ### TaskManagement Project
 https://github.com/rph2002/dev_project/archive/refs/heads/main.zip
 
