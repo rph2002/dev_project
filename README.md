@@ -9,7 +9,7 @@ templating.
 * VirtualBox 7.0.20
 * Ubuntu 24.04.1 LTS
 * SDKMAN 5.18.2
-* openjdk version 11.0.11-open
+* OpenJDK 11.0.11-open
 * Grails 5.3.6
 * IntelliJ Community Edition
 
@@ -32,6 +32,8 @@ Follow the installation guide depending on your OS
 
 Download: https://sdkman.io/install/
 
+### OpenJDK 11.0.11-open
+
 ### Grails 5.3.6
 Follow https://docs.grails.org/5.3.6/guide/single.html#gettingStarted to do a proper install of Grails 5.3.6
 
@@ -53,4 +55,5 @@ Now that you have all the required technologies downloaded, you can launch the a
   * Select the `build.gradle` file inside of the /TaskManagement/ directory and open the project through that file
   * Then, find the Application.groovy file inside "/TaskManagement/grails-app/init/taskmanagement/"
   * Finally, hit the green arrow in the top right to run to application
+    
 Regardless of how you launched the app, the web page should be accessible at http://localhost:8080/
