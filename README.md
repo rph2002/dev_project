@@ -29,6 +29,13 @@ This is only required if you would prefer to do your work in an Ubuntu environme
 
 Download: https://ubuntu.com/download/desktop
 
+* With VirtualBox and the Ubuntu ISO installed, open VirtualBox, hit "New"
+* Type a name for your machine
+* For the ISO image, browse to find the Ubuntu ISO file you just downloaded and select it
+* Then hit next, where you can choose the memory and cpu processors
+* I recommend 8G of memory and 2 processors
+* Then hit next until you reach finish
+
 ### SDKMAN 5.18.2
 Follow the installation guide depending on your OS
 
