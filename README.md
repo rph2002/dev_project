@@ -8,7 +8,7 @@ templating.
 ## Assumptions
 * You are running this application in a Linux-based environment
 * User is familiar with navigation in Linux-based environment
-* Only required features wanted
+* Only required features wanted (no extra features added)
 
 ## Limitations
 * Application is only available in local environment
